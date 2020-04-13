@@ -48,6 +48,15 @@ describe "#translate" do
 
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
+  it "capitalized words" do
+    s = translate("CAPITALIZED WORDS ARE STILL CAPITALIZED")
+    expect(s).to eq("APITALIZEDCay ORDSWay AREay ILLSTay APITALIZEDCay")
+  end
+  
   # * retain the punctuation from the original phrase
-
+  it "retain the punctuation" do
+    s = translate("Mais... comment vérifer ça ?")
+    expect(s).to eq("ais...May ommentcay ifervéray açay ?ay")
+  end
+  
 end
